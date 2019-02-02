@@ -1,4 +1,4 @@
-package datatypes;
+package homeworks;
 
 public class FigureAnotherSide {
     public static void main(String[] args) {

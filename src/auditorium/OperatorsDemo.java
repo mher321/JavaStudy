@@ -6,8 +6,6 @@ public class OperatorsDemo {
         leftShift();
     }
 
-
-
     static void leftShift() {
         byte b = -1;
         printNumberAsBinary(b >> 3);
