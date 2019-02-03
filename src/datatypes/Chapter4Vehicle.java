@@ -1,12 +1,14 @@
 package datatypes;
+
 // This program creates two Vehicle objects.
 class Vehicle {
     int passengers; // number of passengers
     int fuelcap; // fuel capacity in gallons
     int mpg; // fuel consumption in miles per gallon
-    }
+}
+
 // This class declares an object of tape Vehicle.
-class TwoVehicles{
+class TwoVehicles {
     public static void main(String[] args) {
         Vehicle minivan = new Vehicle();
         Vehicle sportscar = new Vehicle();
@@ -25,7 +27,7 @@ class TwoVehicles{
 
         //compute the rages assuming a full tank of gas
         range1 = minivan.fuelcap * minivan.mpg;
-        range2 = sportscar.fuelcap *sportscar.mpg;
+        range2 = sportscar.fuelcap * sportscar.mpg;
 
         System.out.println("Minivan can carry " + minivan.passengers + " with a range of " + range1);
 
@@ -40,26 +42,29 @@ class VehicleReturn {
     int mpg; // fuel consumption in miles per gallon
 
     //this is constructor of vehicle
-    VehicleReturn(int p, int f, int m){
+    VehicleReturn(int p, int f, int m) {
         passengers = p;
         fuelcap = f;
         mpg = m;
     }
+
     // Return the range.
     int range() {
         return mpg * fuelcap;
     }
+
     // Compute fuel needed for a given distance.
-    double fuelneeded(int miles){
-        return (double) miles/mpg;
+    double fuelneeded(int miles) {
+        return (double) miles / mpg;
     }
 }
+
 // This class declares an object of tape Vehicle.
-class VehConsDemo{
+class VehConsDemo {
     public static void main(String[] args) {
         // construct complete vehicles.
-        VehicleReturn minivan = new VehicleReturn(7,16,21);
-        VehicleReturn sportscar = new VehicleReturn(2,14,12);
+        VehicleReturn minivan = new VehicleReturn(7, 16, 21);
+        VehicleReturn sportscar = new VehicleReturn(2, 14, 12);
         double gallons;
         int dist = 252;
 
@@ -75,13 +80,13 @@ class VehConsDemo{
 
 // return true if x is even/
 class ChkNum {
-    boolean isEven(int x){
-        if ((x%2) == 0) return true;
+    boolean isEven(int x) {
+        if ((x % 2) == 0) return true;
         else return false;
     }
 }
 
-class ParmDemo{
+class ParmDemo {
     public static void main(String[] args) {
         ChkNum e = new ChkNum();
 
@@ -98,7 +103,7 @@ class HelpClassDemo {
         char choise, ignore;
         Help hlpobj = new Help();
 
-        for (;;) {
+        for (; ; ) {
             do {
                 hlpobj.showmenu();
 
@@ -107,8 +112,8 @@ class HelpClassDemo {
                 do {
                     ignore = (char) System.in.read();
 
-                }while (ignore != '\n');
-            }while (!hlpobj.isvalid(choise));
+                } while (ignore != '\n');
+            } while (!hlpobj.isvalid(choise));
             if (choise == 'q') break;
             System.out.println();
 
@@ -121,15 +126,17 @@ class HelpClassDemo {
 class FDemo {
     int x;
 
-    FDemo (int i) {
+    FDemo(int i) {
         x = i;
     }
+
     // called when object is recycled
-    protected void finalize (){
+    protected void finalize() {
         System.out.println("Finalizing " + x);
     }
+
     // generates an object that is immediately destroyed
-    void generator(int i){
+    void generator(int i) {
         FDemo o = new FDemo(i);
     }
 }
@@ -157,7 +164,7 @@ class Pwr {
     int e;
     double val;
 
-    Pwr (double base, int exp) {
+    Pwr(double base, int exp) {
         this.b = base;
         this.e = exp;
 
@@ -166,6 +173,7 @@ class Pwr {
         for (; exp < 0; exp--)
             this.val = this.val * base;
     }
+
     double get_pwr() {
         return this.val;
     }
@@ -173,13 +181,13 @@ class Pwr {
 
 class DemoPwr {
     public static void main(String[] args) {
-        Pwr x = new Pwr(4.0,2);
+        Pwr x = new Pwr(4.0, 2);
         Pwr y = new Pwr(2.5, 1);
         Pwr z = new Pwr(5.7, 0);
 
-        System.out.println(x.b + " raised to the " + x.e +" power is " + x.get_pwr());
-        System.out.println(y.b + " raised to the " + y.e +" power is " + y.get_pwr());
-        System.out.println(z.b + " raised to the " + z.e +" power is " + z.get_pwr());
+        System.out.println(x.b + " raised to the " + x.e + " power is " + x.get_pwr());
+        System.out.println(y.b + " raised to the " + y.e + " power is " + y.get_pwr());
+        System.out.println(z.b + " raised to the " + z.e + " power is " + z.get_pwr());
 
 
     }
