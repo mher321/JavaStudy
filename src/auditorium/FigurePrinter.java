@@ -13,11 +13,10 @@ package auditorium;
 
 public class FigurePrinter {
     public static void main(String[] args) {
-        int n = 4;
         int i, j;
 
         // run loop n times
-        for (i = 0; i <= n; i++) {
+        for (i = 0; i <= 4; i++) {
 
             for (j = 4; j >= 0; j--) {
                 if (j < i)
@@ -43,17 +42,18 @@ class Figureprinter2 {
     public static void main(String args[]) {
         // TODO : complete the method
 
+
         for (int i = 0; i < 5; i++) {
            for (int k = 0; k < (5 - i); k++) {
-                System.out.print(" ");
+                System.out.print("  ");
             }
             for (int j = 0; j < i; j++) {
-                System.out.print("*");
+                System.out.print(" *");
             }
             System.out.println();
            }
         }
-    }
+}
 
 
 /**
@@ -67,8 +67,6 @@ class Figureprinter2 {
  *       *
  *
  */
-
-
 
         class Figureprint3 {
             public static void main(String[] args) {
@@ -103,23 +101,17 @@ class Figureprinter2 {
          */
         class Figureprint4 {
             public static void main(String[] args) {
+                for (int i = 0; i <= 4; i++) {
 
-                int n = 5;
-
-                for (int i = 1; i <= n; i++) {
-                    int j = 1;
-                    for (; j <= i - 1; j++) {
-                        System.out.print(" ");
+                    for (int j = 4; j >= 0; j--) {
+                        if (j > i)
+                            System.out.print(" *");
                     }
-                    for (; j <= n; j++) {
-                        System.out.print(" *");
-                    }
-                    System.out.print('\n');
+                    System.out.println(" ");
                 }
-                System.out.print('\n');
             }
-
         }
+
             /**
              * Draws the rhombus by specified length number
              * for example when n = 4 , it must be such as
@@ -135,11 +127,31 @@ class Figureprinter2 {
              *
              */
             class DrawRhombus {
-                public static void drawRhombus(int length) {
+                public static void main (String args[]) {
                     // TODO : complete the method
+
+                    // run loop n times
+                    for (int i = 0; i <= 5; i++) {
+
+                        for (int j = 5; j >= 0; j--) {
+                            if (j < i)
+                                System.out.print(" *");
+                        }
+                        System.out.println(" ");
+                    }
+                    for (int i = 0; i <= 4; i++) {
+
+                        for (int j = 4; j >= 0; j--) {
+                            if (j > i)
+                                System.out.print(" *");
+                        }
+                        System.out.println(" ");
+                    }
+
                 }
 
             }
+
             /**
              * Draws the rhombus by specified length number
              * for example when n = 4 , it must be such as
@@ -189,9 +201,9 @@ class Figureprinter2 {
                 }
                 System.out.println();
             }
-        }
 
-     /*   public static void main(String[] args) {
+
+        public static void main(String[] args) {
 //        drawLeftUpTriangle(10);
 //        drawRightBottomTriangle(3);
 //        drawRightBottomTriangle(4);
@@ -202,4 +214,3 @@ class Figureprinter2 {
 
 
     }
-    */
