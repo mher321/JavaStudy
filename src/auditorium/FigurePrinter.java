@@ -9,7 +9,6 @@ package auditorium;
  *      * * *
  *      * * * *
  *
- * @param length  specified length of triangle will be drawn
  */
 
 public class FigurePrinter {
@@ -27,82 +26,80 @@ public class FigurePrinter {
             System.out.println(" ");
         }
     }
-
 }
-/*class Figureprinter2 {
+
+/**
+ * Draws the triangle by specified length number
+ * for example when n = 4 , it must be such as
+ * drawn below :
+ *             *
+ *           * *
+ *         * * *
+ *       * * * *
+ *
+ */
+
+class Figureprinter2 {
     public static void main(String args[]) {
         // TODO : complete the method
-        int n = 5;
 
-
-            for (int i = 1; i < 10; i += 2) {
-                for (int k = 0; k < (4 - i / 2); k++) {
-                    System.out.print(" ");
-                }
-                for (int j = 0; j < i; j++) {
-                    System.out.print("*");
-                }
-                System.out.println("");
+        for (int i = 0; i < 5; i++) {
+           for (int k = 0; k < (5 - i); k++) {
+                System.out.print(" ");
             }
-
-        // run loop n times
-
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+           }
+        }
     }
 
-*/
+
+/**
+ * Draws the triangle by specified length number
+ * for example when n = 4 , it must be such as
+ * drawn below :
+ *
+ *       * * * *
+ *       * * *
+ *       * *
+ *       *
+ *
+ */
+
+
+
+        class Figureprint3 {
+            public static void main(String[] args) {
+                // TODO : complete the method
+                for (int i=1; i<=4; i++) {
+
+                    for (int j=1; j<=3; j++) {
+                        if(j>=i)
+                        System.out.print(" *");
+                    }System.out.println(" *");
+                }
+            }
+        }
+
+
+        class DrawLeftBottomTriangle {
+            public static void drawLeftBottomTriangle(int length) {
+                // TODO : complete the method
+            }
+        }
 
         /**
          * Draws the triangle by specified length number
          * for example when n = 4 , it must be such as
          * drawn below :
-         *             *
-         *           * *
-         *         * * *
-         *       * * * *
-         *
-         * @param length  specified length of triangle will be drawn
-         */
-/*        public static class Figureprint3 {
-            public static void main(String[] args) {
-                // TODO : complete the method
-                for (int i=1; i<10; i += 2)
-                {
-                    for (int j=0; j<i; j++)
-                    {
-                        System.out.print("*");
-                    }
-                    System.out.println("");
-                }
-            }
-        }
-*/
-        /**
-         * Draws the triangle by specified length number
-         * for example when n = 4 , it must be such as
-         * drawn below :
-         *
-         *       * * * *
-         *       * * *
-         *       * *
-         *       *
-         *
-         * @param length  specified length of triangle will be drawn
-         */
-     /*   public static void drawLeftBottomTriangle ( int length){
-            // TODO : complete the method
-        }
-*/
-        /**
-         * Draws the triangle by specified length number
-         * for example when n = 4 , it must be such as
-         * drawn below :
          *
          *       * * * *
          *         * * *
          *           * *
          *             *
          *
-         * @param length  specified length of triangle will be drawn
          */
         class Figureprint4 {
             public static void main(String[] args) {
@@ -122,6 +119,7 @@ public class FigurePrinter {
                 System.out.print('\n');
             }
 
+        }
             /**
              * Draws the rhombus by specified length number
              * for example when n = 4 , it must be such as
@@ -135,12 +133,13 @@ public class FigurePrinter {
              * * *
              * *
              *
-             * @param length specified length of rhombus will be drawn
              */
-            public static void drawRhombus(int length) {
-                // TODO : complete the method
-            }
+            class DrawRhombus {
+                public static void drawRhombus(int length) {
+                    // TODO : complete the method
+                }
 
+            }
             /**
              * Draws the rhombus by specified length number
              * for example when n = 4 , it must be such as
@@ -151,11 +150,11 @@ public class FigurePrinter {
              * *     *
              * * * * *
              *
-             * @param width specified width of rectangle will be drawn
              */
-            public static void drawEmptyRectangle(int width, int height) {
-                drawEmptyRectangle(width, height, " *");
-            }
+            class DrawEmtyRectangle {
+                public static void drawEmptyRectangle(int width, int height) {
+                    drawEmptyRectangle(width, height, " *");
+                }
 
             public static void drawEmptyRectangle(int width, int height, String printingSymbols) {
                 printFullRow(width, printingSymbols);
