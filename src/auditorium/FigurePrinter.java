@@ -105,7 +105,7 @@ public class FigurePrinter {
          * @param length  specified length of triangle will be drawn
          */
         class Figureprint4 {
-            public static void main(String[]args) {
+            public static void main(String[] args) {
 
                 int n = 5;
 
@@ -122,75 +122,77 @@ public class FigurePrinter {
                 System.out.print('\n');
             }
 
-        /**
-         * Draws the rhombus by specified length number
-         * for example when n = 4 , it must be such as
-         * drawn below :
-         *
-         *        *
-         *       * *
-         *      * * *
-         *     * * * *
-         *      * * *
-         *       * *
-         *        *
-         * @param length  specified length of rhombus will be drawn
-         */
-        public static void drawRhombus ( int length){
-            // TODO : complete the method
-        }
-
-        /**
-         * Draws the rhombus by specified length number
-         * for example when n = 4 , it must be such as
-         * drawn below :
-         *
-         *     * * * *
-         *     *     *
-         *     *     *
-         *     * * * *
-         *
-         * @param width  specified width of rectangle will be drawn
-         */
-        public static void drawEmptyRectangle ( int width, int height){
-            drawEmptyRectangle(width, height, " *");
-        }
-
-        public static void drawEmptyRectangle ( int width, int height, String printingSymbols){
-            printFullRow(width, printingSymbols);
-            for (int i = 0; i < height - 2; i++) {
-                printEmptyRow(width, printingSymbols);
+            /**
+             * Draws the rhombus by specified length number
+             * for example when n = 4 , it must be such as
+             * drawn below :
+             * <p>
+             * *
+             * * *
+             * * * *
+             * * * * *
+             * * * *
+             * * *
+             * *
+             *
+             * @param length specified length of rhombus will be drawn
+             */
+            public static void drawRhombus(int length) {
+                // TODO : complete the method
             }
-            printFullRow(width, printingSymbols);
 
-        }
-
-        static void printEmptyRow ( int length){
-            printEmptyRow(length, " *");
-        }
-
-        static void printEmptyRow ( int length, String printingSymbols){
-            System.out.print(printingSymbols);
-            int spacesCount = (length - 2) * printingSymbols.length();
-            for (int i = 0; i < spacesCount; i++) {
-                System.out.print(' ');
+            /**
+             * Draws the rhombus by specified length number
+             * for example when n = 4 , it must be such as
+             * drawn below :
+             * <p>
+             * * * * *
+             * *     *
+             * *     *
+             * * * * *
+             *
+             * @param width specified width of rectangle will be drawn
+             */
+            public static void drawEmptyRectangle(int width, int height) {
+                drawEmptyRectangle(width, height, " *");
             }
-            System.out.print(printingSymbols + '\n');
 
-        }
+            public static void drawEmptyRectangle(int width, int height, String printingSymbols) {
+                printFullRow(width, printingSymbols);
+                for (int i = 0; i < height - 2; i++) {
+                    printEmptyRow(width, printingSymbols);
+                }
+                printFullRow(width, printingSymbols);
 
-        static void printFullRow ( int length){
-            printFullRow(length, " *");
-        }
+            }
 
-        static void printFullRow ( int length, String printingSymbols){
-            for (int i = 0; i < length; i++) {
+            static void printEmptyRow(int length) {
+                printEmptyRow(length, " *");
+            }
+
+            static void printEmptyRow(int length, String printingSymbols) {
                 System.out.print(printingSymbols);
+                int spacesCount = (length - 2) * printingSymbols.length();
+                for (int i = 0; i < spacesCount; i++) {
+                    System.out.print(' ');
+                }
+                System.out.print(printingSymbols + '\n');
+
             }
-            System.out.println();
+
+            static void printFullRow(int length) {
+                printFullRow(length, " *");
+            }
+
+            static void printFullRow(int length, String printingSymbols) {
+                for (int i = 0; i < length; i++) {
+                    System.out.print(printingSymbols);
+                }
+                System.out.println();
+            }
         }
 
-         public static void main(String[] args) {
+     /*   public static void main(String[] args) {
 //        drawLeftUpTriangle(10);
 //        drawRightBottomTriangle(3);
 //        drawRightBottomTriangle(4);
@@ -201,3 +203,4 @@ public class FigurePrinter {
 
 
     }
+    */
