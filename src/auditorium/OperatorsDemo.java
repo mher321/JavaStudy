@@ -8,9 +8,11 @@ public class OperatorsDemo {
 
     static void leftShift() {
         byte b = -1;
+
+
         printNumberAsBinary(b >> 3);
         printNumberAsBinary(b >>> 3);
-        printNumberAsBinary(b << 6);
+        printNumberAsBinary(b << 8);
 //        System.out.println(b << 31);
     }
 
@@ -20,7 +22,7 @@ public class OperatorsDemo {
             if (i % 8 == 0){
                 System.out.print(' ');
             }
-        }
+       }
         System.out.println();
     }
 
