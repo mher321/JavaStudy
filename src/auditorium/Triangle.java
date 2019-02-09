@@ -10,6 +10,6 @@ public class Triangle {
         }
     }
 
-    private void printTriangleLine(int i) {
+    public void printTriangleLine(int i) {
     }
 }

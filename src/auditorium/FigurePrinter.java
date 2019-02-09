@@ -164,7 +164,7 @@ class Figureprinter2 {
              *
              */
             class DrawEmtyRectangle {
-                public static void drawEmptyRectangle(int width, int height) {
+                public static void  drawEmptyRectangle(int width, int height) {
                     drawEmptyRectangle(width, height, " *");
                 }
 
