@@ -117,23 +117,22 @@ class Figureprinter2 {
              * for example when n = 4 , it must be such as
              * drawn below :
              * <p>
-             * *
-             * * *
-             * * * *
+             *    *
+             *   * *
+             *  * * *
              * * * * *
-             * * * *
-             * * *
-             * *
+             *  * * *
+             *   * *
+             *    *
              *
              */
             class DrawRhombus {
-                public static void main (String args[]) {
-                    // TODO : complete the method
+                public static void DrawRhombus (String args[]) {
 
                     // run loop n times
-                    for (int i = 0; i <= 5; i++) {
+                    for (int i = 0; i <= 4; i++) {
 
-                        for (int j = 5; j >= 0; j--) {
+                        for (int j = 4; j >= 0; j--) {
                             if (j < i)
                                 System.out.print(" *");
                         }
@@ -168,7 +167,7 @@ class Figureprinter2 {
                     drawEmptyRectangle(width, height, " *");
                 }
 
-            public static void drawEmptyRectangle(int width, int height, String printingSymbols) {
+            public static void  drawEmptyRectangle(int width, int height, String printingSymbols) {
                 printFullRow(width, printingSymbols);
                 for (int i = 0; i < height - 2; i++) {
                     printEmptyRow(width, printingSymbols);

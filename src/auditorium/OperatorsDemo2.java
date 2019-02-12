@@ -5,7 +5,7 @@ public class OperatorsDemo2 {
 
     static void rigthshift() {
 
-        byte b = 2;
+        byte b = -2;
 
         printNumberAsBinary(b >> 9);
         printNumberAsBinary(b >>> 3);
