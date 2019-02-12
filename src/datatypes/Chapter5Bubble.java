@@ -1,4 +1,4 @@
-package auditorium.classintro;
+package datatypes;
 // Demonstrate the bubble sort.
 public class Chapter5Bubble {
     public static void main(String[] args) {
