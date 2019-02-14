@@ -256,3 +256,132 @@ class ForEach{
         System.out.println("Summation : " + sum);
     }
 }
+
+// Use for-each style for on a two-dimensional array.
+class ForEach2{
+    public static void main(String[] args) {
+        int sum = 0;
+        int nums [][] = new int[3][5];
+
+        //give nums some values
+        for (int i=0; i < 5; i++)
+            for (int j=0; j < 3; j++)
+                nums[i][j] = (i+1)*(j+1);
+
+            // Use for-each for loop display and sum the values
+        for (int x[]: nums){
+            for (int y : x){
+                System.out.println("Value is: " + y);
+                sum += y;
+
+            }
+        }
+        System.out.println("Summation: " + sum);
+    }
+}
+
+// Search an array using for-each style for.
+class Search{
+    public static void main(String[] args) {
+        int nums[] = {6,8,3,7,5,6,1,4};
+        int val = 5;
+        boolean found = false;
+
+        // Use for-each for to search nums for val.
+        for (int x: nums){
+            if (x == val){
+                found = true;
+                break;
+            }
+        }
+        if(found)
+            System.out.println("Value found.");
+    }
+}
+
+//Some string operations.
+
+class StrOps{
+    public static void main(String[] args) {
+        String str1 = "When it comes to programing, Java is #1. ";
+        String str2 = (str1);
+        String str3 = "Java strings are powerful. ";
+        int result, idx;
+        char ch;
+
+        System.out.println("Length of str1: " + str1.length());
+
+        // display str1,one char at a time.
+        for (int i=0; i < str1.length(); i++)
+            System.out.print(str1.charAt(i));
+        System.out.println();
+        if (str1.equals(str2))
+            System.out.println("str1 equals str2 ");
+        else
+            System.out.println("str1 does not equal str2 ");
+        if (str1.equals(str3))
+            System.out.println("str1 equal str3 ");
+        else
+            System.out.println("str1 does not equal str3");
+
+        result = str1.compareTo(str3);
+        if (result == 0)
+            System.out.println("str1 and str3 are equal ");
+        else if(result < 0)
+            System.out.println("str 3 less than str 1");
+        else
+            System.out.println("str1 is greater than str3");
+
+        //assign a new string to str2
+        str2 = "One Two Three One";
+
+        idx = str2.indexOf("One");
+        System.out.println("Index of first occurrence of One:  " + idx);
+        idx = str2.lastIndexOf("One");
+        System.out.println("Index of first occurrence of One: " + idx);
+    }
+}
+
+//Demonstrate string arrays.
+class StringArrays {
+    public static void main(String[] args) {
+        String strs[] = {"This","is","a","test"};
+
+        System.out.println("Original array: ");
+        for (String s: strs)
+            System.out.print(s + " ");
+        System.out.println("\n");
+
+        // change a string
+        strs[1] = "was";
+        strs[3] = "test, too!";
+
+        System.out.println("Modified array: ");
+        for (String s: strs)
+            System.out.print(s + " ");
+
+    }
+}
+
+// Use substring().
+class SubStr {
+    public static void main(String[] args) {
+        String orgstr = "Java makes the Web move.";
+
+        //construct a substring
+        String substr = orgstr.substring(5,18);
+
+        System.out.println("orgstr. " + orgstr);
+        System.out.println("substr: " + substr);
+    }
+}
+
+//Display all command line information.
+class ClDemo{
+    public static void main(String args[]) {
+        System.out.println("There are " + args.length + "the command line arguments");
+        System.out.println("They are:");
+        for (int i=0; i < args.length; i++)
+            System.out.println("arg[" + i + "]: " + args[i]);
+    }
+}
