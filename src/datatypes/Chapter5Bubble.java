@@ -385,3 +385,164 @@ class ClDemo{
             System.out.println("arg[" + i + "]: " + args[i]);
     }
 }
+
+//A simple automated phone directory.
+class Phone {
+    public static void main(String[] args) {
+        String numers [] [] = {
+                {"Gag", "099229916"},
+                {"Hayk", "091740020"},
+                {"Axper", "055036666"}
+
+        };
+
+        int i;
+
+        if(args.length != 1)
+            System.out.println("Usage: java Phone <name>");
+        else {
+            for (i=0; i < numers.length; i++){
+                if(numers[i][0].equals(args[0])){
+                    System.out.println(numers[i][0] + ": " + numers[i][1]);
+                    break;
+                }
+            }
+            if (i == numers.length)
+                System.out.println("Name not found. ");
+        }
+    }
+}
+
+// Uppercase letters.
+class UpCase{
+    public static void main(String[] args) {
+        char ch;
+
+        for (int i=0; i < 20; i++){
+            ch = (char) ('a' + i);
+            System.out.print(ch);
+
+            // This statement turns of the 6th bit.
+            ch = (char) ((int) ch & 65503); //ch is now uppercase
+
+            System.out.print(ch + " ");
+
+        }
+    }
+}
+
+// Display the bits within a byte.
+class ShowBits{
+    public static void main(String[] args) {
+        int t;
+        byte val;
+
+        val = 123;
+        for (t=128; t > 0; t = t/2){
+            if ((val & t) !=0)
+                System.out.print("1 ");
+            else
+                System.out.print("0 ");
+        }
+    }
+}
+
+//Lowercase letters
+class LowCase{
+    public static void main(String[] args) {
+        char ch;
+
+        for (int i=0; i < 10; i++){
+            ch = (char) ('C' + i);
+            System.out.print(ch);
+
+            //This statement turns on 6th bit.
+            ch = (char) ((int) ch | 32); //ch is now lowercase
+
+            System.out.print(ch + " ");
+        }
+    }
+}
+
+//Use XOR to encode and decode a massage.
+class Encode {
+    public static void main(String[] args) {
+        String msg = "This is a test";
+        String encmsg = "";
+        String decmsg = "";
+        int key = 88;
+
+        System.out.print("Original massage: ");
+        System.out.println(msg);
+
+        //encode the massage
+        for (int i=0; i < msg.length(); i++)
+            encmsg = encmsg + (char) (msg.charAt(i) ^ key);
+
+        System.out.print("Encoded massage: " );
+        System.out.println(encmsg);
+
+        //decode the massage
+        for (int i = 0; i < msg.length(); i++)
+            decmsg = decmsg + (char)(encmsg.charAt(i) ^ key);
+
+        System.out.print("Decoded massage: ");
+        System.out.println(decmsg);
+
+    }
+}
+
+class NotDemo{
+    public static void main(String[] args) {
+        byte b = -34;
+        for (int t = 128; t > 0; t = t/2){
+            if ((b & t) != 0)
+                System.out.print("1 ");
+            else
+                System.out.print("0 ");
+        }
+        System.out.println();
+
+        //revers all bits
+        b =(byte) ~b;
+
+        for (int t=128; t > 0; t = t/2){
+            if ((b & t) != 0)
+                System.out.print("1 ");
+            else
+                System.out.print("0 ");
+        }
+    }
+}
+
+//Demonstrate the shift << and >> operators.
+class ShiftDemo{
+    public static void main(String[] args) {
+        int val = 1;
+
+        for (int i = 0; i < 8; i++){
+            for (int t = 128; t > 0; t = t/2){
+                if((val & t) !=0 )
+                    System.out.print("1 ");
+                else
+                    System.out.print("0 ");
+            }
+            System.out.println();
+            val = val << 1;
+        }
+
+        val = 128;
+
+        for (int i = 0; i < 8; i++){
+            for(int t = 128; t > 0; t = t/2){
+                if ((val & t) != 0)
+                    System.out.print("1 ");
+                else
+                    System.out.print("0 ");
+            }
+            System.out.println();
+            val = val >> 1; // right shift.
+        }
+
+    }
+}
