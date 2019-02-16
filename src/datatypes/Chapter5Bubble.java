@@ -1,4 +1,7 @@
 package datatypes;
+
+import java.awt.*;
+
 // Demonstrate the bubble sort.
 public class Chapter5Bubble {
     public static void main(String[] args) {
@@ -482,6 +485,7 @@ class Encode {
         System.out.print("Encoded massage: " );
         System.out.println(encmsg);
 
+
         //decode the massage
         for (int i = 0; i < msg.length(); i++)
             decmsg = decmsg + (char)(encmsg.charAt(i) ^ key);
@@ -546,3 +550,4 @@ class ShiftDemo{
 
     }
 }
+
