@@ -28,7 +28,7 @@ public class ArrayUtil {
 
 
     public static void main(String[] args) {
-        int [] array = {2, 8, 4, 1, 6, 5, 0, 9, 11};
+        int [] array = {2, 8, 4, 1, 6, 565, 0, 9, 11};
         print(array);
         BubbleSort(array);
 
