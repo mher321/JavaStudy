@@ -10,7 +10,7 @@ public class OperatorsDemo {
         byte b = -1;
 
 
-        printNumberAsBinary(b >> 3);
+        printNumberAsBinary(b = 3);
         printNumberAsBinary(b >>> 3);
         printNumberAsBinary(b << 8);
 //        System.out.println(b << 31);

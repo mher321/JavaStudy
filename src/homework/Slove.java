@@ -5,7 +5,7 @@ public class Slove {
         double x,y;
         x =14;
 
-        y = x/209+x*(29-(13*13)+x/3);
+        y = (x/209)+(x*(29-(13*13)+(x/3)));
 
         System.out.println(y);
     }
