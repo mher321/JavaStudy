@@ -74,8 +74,17 @@ public class ArrayUtil {
      * @param i     the index of one element to be swapped.
      * @param j     the index of the other element to be swapped.
      */
-    private static void swap(int[] array, int i, int j) {
-        //todo: implement
+
+    public static void swap(int[] array, int i, int j) {
+//       int miban = array[i];
+//       int miban2 = array[j];
+//       array[i] = miban2;
+//       array[j] = miban;
+
+        int n = array[i];
+
+        array[i] = array[j];
+        array[j] = n;
     }
 
     public static void print(int[] a) {
@@ -88,11 +97,18 @@ public class ArrayUtil {
      * @param a the util to print
      */
     public static void print(int[] a, String delimiter) {
-        // todo implement
+        for (int i = 0; i < a.length - 1; i++) {
+            System.out.print(a[i] + delimiter);
+        }
+        System.out.print(a[a.length - 1]);
     }
 
+
     public static void print(int[][] a, String delimiter) {
-        // todo implement
+        for (int i = 0; i < a.length ; i++) {
+            print(a[i],delimiter);
+            System.out.println();
+        }
     }
 }
       
