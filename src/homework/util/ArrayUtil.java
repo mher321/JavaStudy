@@ -17,14 +17,25 @@ public class ArrayUtil {
     }
 
     public static int getMaximum(int[] array) {
-//        TODO   implement
-        return 0;   // this must be replaced by correct code
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
+            }
+        }
+        return max;
     }
 
 
     public static int getMinimum(int[] array) {
-//        TODO implement
-        return 0;   // this must be replaced by correct code
+        int min = array[0];
+        for (int i = 0; i < array.length ; i++) {
+            if (min > array[i]){
+                min = array[i];
+            }
+
+        }
+        return min;   // this must be replaced by correct code
     }
 
     /**
@@ -34,13 +45,11 @@ public class ArrayUtil {
      * @return the sum of the specified util elements
      */
     public static int getSum(int[] array) {
-        int max = array[0];
-        for (int i = 1; i < array.length; i++) {
-            if (max < array[i]) {
-                max = array[i];
-            }
+        int sum = 0;
+        for (int i = 0; i < array.length ; i++) {
+            sum += array[i];
         }
-        return max;   // this must be replaced by correct code
+        return sum;
     }
 
 
@@ -51,8 +60,13 @@ public class ArrayUtil {
      * @return new created reversed array to the specified parameter "array"
      */
     public static int[] reverse(int[] array) {
-//        TODO implement
-        return null;   // this must be replaced by correct code
+        int [] result = new int[array.length];
+        int lastIndex = array.length - 1;
+        for (int i = 0; i < array.length ; i++) {
+            result [i] =  array[lastIndex - i];
+
+        }
+        return result;   // this must be replaced by correct code
     }
 
     /**
@@ -61,9 +75,11 @@ public class ArrayUtil {
      * @param array an array: Elements order of wich must be reversed
      */
     public static void reverseInSameArray(int[] array) {
-//        TODO implement
+        for (int i = 0; i < array.length / 2 ; i++) {
+            swap(array, i , array.length - i -1);
 
-    }
+            }
+        }
 
     /**
      * Swaps the elements at the specified positions in the specified array.
@@ -76,13 +92,7 @@ public class ArrayUtil {
      */
 
     public static void swap(int[] array, int i, int j) {
-//       int miban = array[i];
-//       int miban2 = array[j];
-//       array[i] = miban2;
-//       array[j] = miban;
-
         int n = array[i];
-
         array[i] = array[j];
         array[j] = n;
     }
@@ -101,14 +111,13 @@ public class ArrayUtil {
             System.out.print(a[i] + delimiter);
         }
         System.out.print(a[a.length - 1]);
+        System.out.println();
     }
 
-
     public static void print(int[][] a, String delimiter) {
-        for (int i = 0; i < a.length ; i++) {
-            print(a[i],delimiter);
+        for (int i = 0; i < a.length; i++) {
+            print(a[i], delimiter);
             System.out.println();
         }
     }
 }
-      

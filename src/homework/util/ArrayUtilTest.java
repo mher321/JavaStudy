@@ -1,18 +1,11 @@
 package homework.util;
 
 public class ArrayUtilTest {
-
-
     public static void main(String[] args) {
         // todo : Organize all test methods calls here
         int array[] = {5, 4, 5, 8, 12, 24};
 
-        array[0] = 5;
-        array[1] = 4;
-        array[2] = 5;
-        array[3] = 8;
-        array[4] = 12;
-        array[5] = 24;
+
 
 
         int twoDemencionalArray[][] = new int[3][2];
@@ -25,15 +18,28 @@ public class ArrayUtilTest {
 
 
 //        System.out.println(ArrayUtil.getSum(array));
-        ArrayUtil.print(twoDemencionalArray, " */* ");
+       // ArrayUtil.print(twoDemencionalArray, " * ");
 
 
 
 
-        ArrayUtil.swap(array,0,1);
-        ArrayUtil.print(array, " */* ");
+//     ArrayUtil.swap(array,0,1);
+//     ArrayUtil.print(array, " */* ");
+
+//     ArrayUtil.print(array);
+//     ArrayUtil.reverseInSameArray(array);
+//     ArrayUtil.print(array);
 
 
+//     ArrayUtil.print(array);
+
+//     ArrayUtil.print(ArrayUtil.reverse(array));
+
+//        ArrayUtil.print(array);
+
+//        System.out.println(ArrayUtil.getMinimum(array));
+
+        int sum = ArrayUtil.getSum(array);
+        System.out.println(sum);
     }
-
 }
