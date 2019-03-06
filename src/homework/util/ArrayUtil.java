@@ -13,8 +13,15 @@ public class ArrayUtil {
      * if the second element is odd. And so on for the next elements of the util
      */
     public static void sortByOddAndEven(int[] array) {
-//        TODO   implement
+
+        for (int i = 0; i < array.length; i++) {
+            if (array.length % 2 != 0) {
+                System.out.println(array);
+            }
+        }
     }
+
+
 
     public static int getMaximum(int[] array) {
         int max = array[0];
