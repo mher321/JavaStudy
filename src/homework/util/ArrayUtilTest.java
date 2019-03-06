@@ -22,7 +22,7 @@ public class ArrayUtilTest {
 
 
 
-//     ArrayUtil.swap(array,0,1);
+   ArrayUtil.swap(array,5,1);
 //     ArrayUtil.print(array, " */* ");
 
 //     ArrayUtil.print(array);
