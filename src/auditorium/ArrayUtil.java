@@ -1,6 +1,8 @@
 package auditorium;
 
 public class ArrayUtil {
+//    345134
+//    012345
     public static void BubbleSort(int [] array) {
         for (int i = 1; i < array.length; i++){
             for (int j = 1; j < array.length; j++){

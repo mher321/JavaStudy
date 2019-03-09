@@ -491,27 +491,31 @@ class SDemo {
 
 // Use a static block
 class StaticBlock {
-    static double rootOf2;
-    static double rootOf3;
+    static Double rootOf2;
+    static Double rootOf3;
 
-    static {
-        System.out.println("Inside static block. ");
-        rootOf2 = Math.sqrt(2.0);
-        rootOf3 = Math.sqrt(3.0);
+    {
+        System.out.println("Creating new object");
     }
 
-    StaticBlock(String msg) {
-        System.out.println(msg);
+
+    StaticBlock() {
+        System.out.println("Constructor");
     }
+
 }
 
 class SDemo3 {
     public static void main(String[] args) {
-        StaticBlock ob = new StaticBlock("Inside Constructor");
+        StaticBlock ob = new StaticBlock();
+        StaticBlock ob1 = new StaticBlock();
+        StaticBlock ob2= new StaticBlock();
+        StaticBlock ob3 = new StaticBlock();
 
-        System.out.println("Square root of 2 is: " + StaticBlock.rootOf2);
 
-        System.out.println("Square root of 3 is: " + StaticBlock.rootOf3);
+
+        //StaticBlock.rootOf3 = 1.3;
+
     }
 }
 
@@ -582,6 +586,7 @@ class Outer {
     void analyze() {
         Inner inOb = new Inner();
 
+
         System.out.println("Maximum: " + inOb.max());
         System.out.println("Minimum: " + inOb.min());
         System.out.println("Average: " + inOb.avg());
@@ -589,6 +594,7 @@ class Outer {
 
     // This is an Inner class
     class Inner {
+        int a;
         int min() {
             int m = nums[0];
 
@@ -667,7 +673,7 @@ class VarArgs2 {
     }
 
     public static void main(String[] args) {
-        vaTest("One vararg: ", 10);
+        vaTest("One vararg: ", 10,223,4,5,3,2,34,5,2);
         vaTest("Three varargs: ", 5, 7, 8);
         vaTest("No Varargs: ");
     }

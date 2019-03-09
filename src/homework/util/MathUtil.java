@@ -3,14 +3,22 @@ package homework.util;
 
 public class MathUtil {
     public static void main(String[] args) {
-        System.out.println(pow(2, 4));
-        System.out.println(abs(-58));
+        A a = new A();
+        A.Ainner ai = a.new Ainner();
+        System.out.println(A.o);
+//        System.out.println(pow(2, 4));
+//        System.out.println(abs(-58));
+//
+//        System.out.println(gcd(6, 28));
+//
+//        System.out.println(factorial(5));
+//        printIntAsBinary(4);
+//        System.out.println(reverse(2749));
 
-        System.out.println(gcd(6, 28));
+//        System.out.println(pow(3,3));
+//       System.out.println(sequenceOfFibonacci(3));
+   //     System.out.println(powWithRecursion(3, 2));
 
-        System.out.println(factorial(5));
-        printIntAsBinary(4);
-        System.out.println(reverse(2749));
 
     }
 
@@ -26,6 +34,7 @@ public class MathUtil {
         int b = 1;
 
         for (int i = 1; i <= n; i++) {
+            System.out.println(b);
             b = b * a;
         }
         return b;
@@ -88,5 +97,60 @@ public class MathUtil {
             number = number / 10;
         }
         return reverse;
+    }
+
+
+//    1 1 2 3 5 8 13
+//    0 1 2 3 4 5 6
+
+    /**
+     * Returns the value of Fibonacci for the given index.
+     *
+     * @param index The index.
+     * @return
+     */
+    public static int sequenceOfFibonacci(int index){
+        if(index == 0 || index == 1) {
+            return 1;
+        }
+
+         return  sequenceOfFibonacci(index - 1) + sequenceOfFibonacci(index - 2);
+
+    }
+
+
+    public static int powWithRecursion(int a, int n){
+        if(n == 1){
+            return a;
+        }
+//            A^3 = A^2 * A
+        return powWithRecursion(a, n - 1) * a;
+    }
+
+    public static int factorialRec(int n){
+        if(n == 1 || n == 0){
+            return 1;
+        }
+        return factorialRec(n - 1) * n;
+    }
+
+
+}
+
+class A {
+    private int x = 1;
+    static  int o = 1;
+    A() {
+        Ainner oo = new Ainner();
+                oo.oo = 22;
+
+    }
+
+    class Ainner {
+          private int oo = 333;
+        Ainner(){
+            x = 2;
+            o = 12;
+        }
     }
 }

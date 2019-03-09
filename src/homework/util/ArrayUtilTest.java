@@ -5,6 +5,18 @@ public class ArrayUtilTest {
         // todo : Organize all test methods calls here
         int array[] = {5, 4, 5, 8, 12, 24, 3, 7};
 
+        int twoDemensionalArray[][] = {
+                {5, 4, 5, 8, 12},
+                {5, 6, 5, 8, 12},
+                {5, 4, 7, 8, 12},
+                {5, 4, 5, 9, 12},
+                {5, 4, 5, 8, 16}
+        };
+     //   ArrayUtil.print(twoDemensionalArray," ");
+
+     //   ArrayUtil.printDiagonal(twoDemensionalArray);
+       ArrayUtil.printLessThanNumber(array, 6);
+
 
 
 //        int twoDemencionalArray[][] = new int[3][2];
@@ -22,7 +34,7 @@ public class ArrayUtilTest {
 
 
 
-   ArrayUtil.swap(array,5,1);
+//   ArrayUtil.swap(array,5,1);
 //     ArrayUtil.print(array, " */* ");
 
 //     ArrayUtil.print(array);
@@ -40,8 +52,8 @@ public class ArrayUtilTest {
 
 //        int sum = ArrayUtil.getSum(array);
 //        System.out.println(sum);
-
-        ArrayUtil.sortByOddAndEven(array);
-        ArrayUtil.print(array);
+//        ArrayUtil.print(array);
+      //  ArrayUtil.sortByOddAndEven(array);
+        //ArrayUtil.print(array);
     }
 }

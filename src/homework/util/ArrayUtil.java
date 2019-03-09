@@ -33,6 +33,14 @@ public class ArrayUtil {
         return max;
     }
 
+    public static void getEven5(int[] array){
+        for (int i = 0; i < array.length ; i++) {
+            if (array.length < 5)
+                System.out.println(array);
+
+        }
+    }
+
 
     public static int getMinimum(int[] array) {
         int min = array[0];
@@ -125,6 +133,36 @@ public class ArrayUtil {
         for (int i = 0; i < a.length; i++) {
             print(a[i], delimiter);
             System.out.println();
+        }
+    }
+
+    /**This method will give the indexes of an array that the  values are less then @number.
+     *
+     * @param array array of int
+     * @param number the number
+     */
+    public static void printLessThanNumber(int[] array, int number){
+        for (int i = 0; i < array.length ; i++) {
+            if(array[i] < number){
+                System.out.print(array[i] + " ");
+            }
+        }
+
+    }
+
+    /**
+     * This function will print the diagonal of two dimensional array.
+     *
+     * @param array The two dimensional array.
+     */
+    public static void printDiagonal(int[][] array){
+        for (int i = 0; i < array.length; i++) {
+//            for (int j = 0; j < array[i].length; j++) {
+//                if(i == j) {
+//                    System.out.print(array[i][j] + " ");
+//                }
+//            }
+            System.out.print(array[i][i] + " ");
         }
     }
 }
