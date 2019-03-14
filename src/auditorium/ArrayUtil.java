@@ -1,8 +1,7 @@
 package auditorium;
 
 public class ArrayUtil {
-//    345134
-//    012345
+
     public static void BubbleSort(int [] array) {
         for (int i = 1; i < array.length; i++){
             for (int j = 1; j < array.length; j++){
@@ -19,15 +18,14 @@ public class ArrayUtil {
         t = array[i];
         array[i] = array[j];
         array[j] = t;
-
     }
+
     public static void print(int [] array){
         for (int i=0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
         System.out.println();
     }
-
 
     public static void main(String[] args) {
         int [] array = {2, 8, 4, 1, 6, 565, 0, 9, 11};

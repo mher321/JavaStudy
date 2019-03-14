@@ -1,11 +1,11 @@
-package homework.util;
+package homework;
 
 
 public class MathUtil {
     public static void main(String[] args) {
         A a = new A();
         A.Ainner ai = a.new Ainner();
-        System.out.println(A.o);
+ //       System.out.println(A.o);
 //        System.out.println(pow(2, 4));
 //        System.out.println(abs(-58));
 //
@@ -15,7 +15,7 @@ public class MathUtil {
 //        printIntAsBinary(4);
 //        System.out.println(reverse(2749));
 
-//        System.out.println(pow(3,3));
+        System.out.println(pow(3,3));
 //       System.out.println(sequenceOfFibonacci(3));
    //     System.out.println(powWithRecursion(3, 2));
 

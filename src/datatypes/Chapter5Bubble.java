@@ -175,7 +175,7 @@ A queue class for characters
  */
 class Queue{
     char q[]; // this array holds the queue
-    int putloc, getloc; // the pu and get indices
+    int putloc, getloc; // the put and get indices
 
     Queue(int size){
         q = new char[size]; // allocate memory for queue

@@ -1,4 +1,4 @@
-package homework.util;
+package homework;
 
 /**
  * This class contains utility methods for array
