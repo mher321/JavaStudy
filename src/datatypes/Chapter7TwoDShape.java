@@ -174,17 +174,33 @@ class Triangle2 extends TwoDShape{
     }
 }
 
+class ColorTriangle2 extends Triangle2{
+    private String color;
+
+    ColorTriangle2(String s, String c, double w, double h){
+        super(s,w,h);
+
+        color = c;
+    }
+    String getColour(){return color;}
+
+    void showColor(){
+        System.out.println("Color is: " + color);
+    }
+}
+
 class Shapes5{
     public static void main(String[] args) {
-        Triangle2 t1 = new Triangle2();
-        Triangle2 t2 = new Triangle2("outlined ", 8.0, 12.0);
-        Triangle2 t3 = new Triangle2(4.0);
+        ColorTriangle2 t1 = new ColorTriangle2("Red","outlined", 8.0,12.0);
+        ColorTriangle2 t2 = new ColorTriangle2("blue","Filled",2.0,2.0);
+        ColorTriangle2 t3 = new ColorTriangle2("ooo","iii",5.2,4.2);
 
-        t1 = t2;
+
 
         System.out.println(" Info for t1 ");
         t1.showStyle();
         t1.showDim();
+        t1.showColor();
         System.out.println("Area is t1: " + t1.area());
 
         System.out.println();
@@ -192,6 +208,7 @@ class Shapes5{
         System.out.println(" Info for t2 ");
         t2.showStyle();
         t2.showDim();
+        t2.showColor();
         System.out.println("Area is t2: " + t2.area());
 
         System.out.println();
@@ -204,3 +221,137 @@ class Shapes5{
     }
 }
 
+// Demonstrate when constructors are executed
+class A{
+    A(){
+        System.out.println("Constructing A");
+    }
+}
+// Creat subclass by extending class A.
+class B extends A{
+    B(){
+        System.out.println("Constructing B");
+    }
+}
+class C extends B{
+    C(){
+        System.out.println("Constructing C");
+    }
+}
+
+class OrderOfConstruction{
+    public static void main(String[] args) {
+        C c = new C();
+    }
+}
+
+// A superclass reference can refer to a subclass object
+
+class X {
+    int a;
+
+    X(int i) {
+        a = i;
+    }
+}
+    class Y extends X {
+        int b;
+
+        Y(int i, int j) {
+            super(j);
+            b = i;
+        }
+    }
+    class SupSubRef{
+        public static void main(String[] args) {
+            X x = new X(10);
+            X x2;
+            Y y = new Y(5,6);
+
+            x2 = x; // Ok both of same tapes
+            System.out.println("x2.a " + x2.a);
+
+            //X references know only about X members
+            x2 = y; //still OK because Y is derived from X
+            System.out.println("x2.a " + x2.a);
+
+            // X references know only about X members
+            x2.a = 19; //OK
+            // x2.b = 27   ERRRRROR, X doesnt have a b member
+        }
+    }
+
+// Methods with differing signatures are
+//overloaded and not overridden.
+
+
+class A1{
+    int i,j;
+    A1(int a,int b){
+       i = a;
+       j = b;
+    }
+    //display i and j
+    void show(){
+        System.out.println("i and j: " + i + " " + j);
+    }
+}
+
+class B1 extends A1{
+    int k;
+
+    B1(int a, int b, int c){
+        super(a,b);
+        k = c;
+    }
+    // overload show
+    void show(String msg){
+        System.out.println(msg + k);
+    }
+}
+class Overload1{
+    public static void main(String[] args) {
+        B1 SubOb = new B1(1,2,3);
+        SubOb.show("This is k:"); // this calls show() in B1
+        SubOb.show();// this calls show in A1
+    }
+}
+
+// Demonstrate dynamic method  dispatch
+
+class Sup{
+    void who(){
+        System.out.println("who() in Sup");
+    }
+}
+class Sub1 extends Sup{
+    void who(){
+        System.out.println("who()  in Sub1");
+    }
+}
+
+class Sub2 extends Sup{
+    void who(){
+        System.out.println("who() in Sub2");
+    }
+}
+
+class DynDispDemo{
+    public static void main(String[] args) {
+        Sup superOB = new Sup();
+        Sub1 subOB1 = new Sub1();
+        Sub2 subOB2 = new Sub2();
+
+        Sup supRef;
+
+        supRef = superOB;
+        supRef.who();
+
+        supRef = subOB1;
+        supRef.who();
+
+        supRef = subOB2;
+        supRef.who();
+
+    }
+}
