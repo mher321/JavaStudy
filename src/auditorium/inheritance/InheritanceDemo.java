@@ -2,9 +2,7 @@ package auditorium.inheritance;
 
 public class InheritanceDemo {
 
-
 }
-
 
 class Base {
     public static final int A_BASE_DEFAULT_VALUE = 2;
@@ -30,11 +28,5 @@ class Child extends Base {
     Child() {
         this(Base.A_BASE_DEFAULT_VALUE, C_DEFAULT_VALUE);
     }
-
-
-
-
-
-
 
 }

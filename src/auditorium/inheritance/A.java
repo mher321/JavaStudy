@@ -3,8 +3,10 @@ package auditorium.inheritance;
 public class A {
     public static void main(String[] args) {
         A a = new A();
+        System.out.println(a);
         a.print("Hello polimorphizm.");
         a  = new B();
+        a.print("Hello polimorphizm.");
         a.print("Hello polimorphizm.");
         a= new C();
         a.print("Hello polimorphizm.");

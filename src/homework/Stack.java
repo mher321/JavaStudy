@@ -32,20 +32,13 @@ public class Stack {
     void push(int value){
         if(tos == array.length - 1){
             System.out.println("Stack is full bro and I will make it bigger by 10 place");
-            array = extendTheArray(array);
+
         }
-            array[tos + 1] = value;
-            tos++;
+        array[++tos] = value;
+
 
     }
 
-    int[] extendTheArray(int[] array) {
-        int[] array1 = new int[array.length + 10];
-        for (int i = 0; i < array.length; i++) {
-            array1[i] = array[i];
-        }
-        return array1;
-    }
     int pop (){
         if(tos == -1){
             System.out.println("There is no value bro");
