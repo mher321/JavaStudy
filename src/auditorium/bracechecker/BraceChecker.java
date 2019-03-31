@@ -39,11 +39,12 @@ public class BraceChecker {
                     stkLastElement = stack.pop();
                     if (stkLastElement != '(') {
                         break lab;
-                    }
+                }
             }
         }
         if (i < txt.length()) {
             if (stkLastElement == 0) {
+                //opened but never closed?
                 resultMassage = "Error: Closed '" + ch + "' but not opened ";
             } else {
                 resultMassage = "Error: Opened '" + stkLastElement + "' but closed '" + ch + "'.";
@@ -84,8 +85,7 @@ class BrTest {
         braceChecker.parse("I {can open  and close ");
         System.out.println(braceChecker.resultMassage);
 
-        braceChecker.parse("I can open  and close} ");
+        braceChecker.parse(" I can open  and close ");
         System.out.println(braceChecker.resultMassage);
     }
 }
-
