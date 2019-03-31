@@ -15,7 +15,7 @@ public class MyWindow extends JFrame {
         g.drawLine(50,100,150,100);
         g.drawRect(50,120,50,70);
         g.drawOval(50,250,50,50);
-        g.setColor(new Color(255,0,0));
+        g.setColor(new Color(255, 245, 52));
         g.fillOval(100,120,30,30);
 
 

@@ -10,7 +10,6 @@ public class Stack {
         this(DEFAULT_SIZE);
     }
 
-
     public Stack(int size) {
         array = new char[size];
     }
@@ -31,4 +30,3 @@ public class Stack {
         return array[tos--];
     }
 }
-

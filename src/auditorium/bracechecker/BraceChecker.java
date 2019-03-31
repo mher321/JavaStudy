@@ -39,7 +39,7 @@ public class BraceChecker {
                     stkLastElement = stack.pop();
                     if (stkLastElement != '(') {
                         break lab;
-                }
+                    }
             }
         }
         if (i < txt.length()) {
