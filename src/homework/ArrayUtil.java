@@ -15,11 +15,9 @@ public class ArrayUtil {
     public static void sortByOddAndEven(int[] array) {
 
         for (int i = 0; i < array.length; i++) {
-            if (array.length % 2 != 0) {
-                System.out.println(array);
+           //TO DO homework
             }
         }
-    }
 
 
 
