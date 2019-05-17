@@ -2,7 +2,7 @@ package auditorium;
 
 public class MethodTest {
     public static void main(String[] args) {
-        double c = 5;
+        double c = 7;
         double b = 16.4;
         c = count(c);
         b = count(b);
